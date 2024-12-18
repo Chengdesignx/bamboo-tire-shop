@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light Theme */
+    --color-bg: theme(colors.slate.50);
+    --color-bg-secondary: theme(colors.white);
+    --color-accent: #f74231;
+    --color-accent-secondary: #f78731;
+    --color-accent-tertiary: #f76431;
+    --color-accent-quaternary: #f73170;
+    --color-accent-warm: #faa72c;
+    --color-accent-hot: #fa4622;
+    --color-text: theme(colors.slate.600);
+    --color-dark-1: theme(colors.slate.900);
+    --color-dark-2: theme(colors.slate.700);
+    --color-dark-3: theme(colors.slate.300);
+    --radius: 0.5rem;
+  }
+
+  /* Dark Theme */
+  .dark {
+    --color-bg: theme(colors.slate.50);
+    --color-bg-secondary: theme(colors.slate.800);
+    --color-accent: #f74231;
+    --color-accent-light: rgba(247, 66, 49, 0.1);
+    --color-text: theme(colors.slate.400);
+    --color-dark-1: theme(colors.slate.200);
+    --color-dark-2: theme(colors.slate.300);
+    --color-dark-3: theme(colors.slate.700);
+  }
+
+  @font-face {
+    font-family: 'agustina';
+    src: url('/fonts/Agustina-Signature.otf') format('opentype');
+  }
+
+  * {
+    @apply focus:outline-dashed outline-[3px] outline-offset-4 outline-accent;
+  }
+
+  ::selection {
+    @apply dark:bg-slate-600/30 bg-slate-400/30 text-accent;
+  }
+}
+
+/* TYPOGRAPHY */
+
+.heading-secondary,
+.h2 {
+  @apply text-3xl sm:text-4xl capitalize font-medium mb-8 sm:mb-12 text-dark-2;
+}
+.heading-tertiary,
+.h3 {
+  @apply text-xl sm:text-2xl tracking-wide capitalize font-medium text-dark-2;
+}
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 2s infinite;
+}
+.map-div {
+  flex: 1;
+  background-color: #eee;
+}

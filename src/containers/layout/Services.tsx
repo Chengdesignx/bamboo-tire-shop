@@ -20,7 +20,7 @@ const services = [
     title: 'Full Tire Service',
     description:
       'Experience comprehensive tire care, including installation, rotation, and balancing. We help you maintain optimal performance and safety for every journey.',
-    imageUrl: '/tiremachines.jpg',
+    imageUrl: '/tireMachines.jpg',
   },
   {
     title: 'Tire Sales',

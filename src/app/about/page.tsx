@@ -24,7 +24,7 @@ export default function About() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           <div className="space-y-8">
             <Image 
-              src="/tiremachines.jpg" 
+              src="/tireMachines.jpg" 
               alt="Destiny Tire shop Service Van"
               className="rounded-lg shadow-lg w-full h-[300px] object-cover"
               width={800}

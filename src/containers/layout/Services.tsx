@@ -2,98 +2,203 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import React from 'react';
+import { useState } from 'react';
 
 const services = [
   {
     title: 'Brake Change',
     description:
-      'Your safety is our priority. Our expert brake change service ensures precise installation using premium-quality parts, giving you confidence on every drive.',
+      'Expert brake change service with premium-quality parts for your safety and confidence on every drive.',
     imageUrl: '/tireman.png',
+    videoUrl: '/v2.mp4',
+    tags: [
+      'Brake Inspection',
+      'Pad Replacement',
+      'Rotor Replacement',
+      'Fluid Top-up',
+    ],
+    link: '/services',
   },
-  // {
-  //   title: 'Rotor Change',
-  //   description:
-  //     'Keep your vehicle running smoothly with our efficient rotor change services. We focus on durability and performance to enhance your driving experience.',
-  //   imageUrl: '/carTireOut.jpg',
-  // },
   {
     title: 'Full Tire Service',
     description:
-      'Experience comprehensive tire care, including installation, rotation, and balancing. We help you maintain optimal performance and safety for every journey.',
+      'Comprehensive tire care including installation, rotation, and balancing for optimal performance and safety.',
     imageUrl: '/tireMachines.jpg',
+    videoUrl: '/v1.mp4',
+    tags: [
+      'Tire Installation',
+      'Tire Rotation',
+      'Tire Balancing',
+      'Pressure Check',
+    ],
+    link: '/services',
   },
   {
     title: 'Tire Sales',
     description:
-      'Explore our wide range of high-quality tires suitable for all vehicle types. Our team will help you find the perfect match for your driving needs.',
-    imageUrl: '/tires.jpg',
+      'Wide range of high-quality tires for all vehicle types. We help you find the perfect match for your needs.',
+    imageUrl: '/shop3.jpg',
+    videoUrl: '',
+    tags: ['All Brands', 'All Sizes', 'Expert Advice', 'Affordable Prices'],
+    link: '/services',
   },
   {
     title: 'Tire Change',
     description:
-      'Enjoy quick and hassle-free tire change services tailored to your schedule. We ensure precision and quality for a seamless replacement experience.',
+      'Quick and hassle-free tire change services, ensuring precision and quality for a seamless experience.',
     imageUrl: '/tirechange.jpg',
+    videoUrl: '/v1.mp4',
+    tags: [
+      'On-site Service',
+      'Fast Replacement',
+      'Wheel Alignment',
+      'Valve Check',
+    ],
+    link: '/services',
   },
   {
     title: 'Tire Repair',
     description:
-      'Extend the life of your tires with our expert repair services. From punctures to minor damage, we restore your tires to peak condition for safe travels.',
-    imageUrl: '/carscreen.jpg',
+      'Extend the life of your tires with expert repair services. We restore your tires to peak condition for safe travels.',
+    imageUrl: '/shop.jpg',
+    videoUrl: '',
+    tags: ['Puncture Repair', 'Leak Fix', 'Tread Inspection', 'Patch & Plug'],
+    link: '/services',
   },
 ];
 
 const ServiceSection = () => {
-  return (
-    <section id="#services" className="py-16 mx-auto  bg-gray-50">
-      <div className="container mx-auto px-4">
-        {/* Section Header */}
-        <div className="flex  justify-between items-center mb-8">
-          <h2 className="text-3xl font-bold text-gray-800">Quality Services</h2>
-          <a
-            href="services"
-            className="text-primary font-semibold hover:underline"
-          >
-            VIEW ALL →
-          </a>
-        </div>
+  const [modalVideo, setModalVideo] = useState<{
+    src: string;
+    poster: string;
+  } | null>(null);
 
-        {/* Service Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <motion.div
-              key={index}
-              className="group relative bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-2xl cursor-pointer"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
-              {/* Image with hover zoom effect */}
-              <div className="relative w-full h-48 overflow-hidden">
+  return (
+    <section id="services" className="py-20 bg-[#FFF9F2]">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            Our Professional Services
+          </h2>
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            We offer a comprehensive range of mobile tire and brake services to
+            keep your vehicle running safely and efficiently.
+          </p>
+        </div>
+        {services.map((service, idx) => (
+          <motion.div
+            key={idx}
+            className="flex flex-col md:flex-row items-center bg-white rounded-2xl shadow-md overflow-hidden mb-12"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: idx * 0.1 }}
+          >
+            {/* Media Section (Image or Video) */}
+            <div className="w-full md:w-1/2 h-64 md:h-80 relative">
+              {service.videoUrl ? (
+                <div
+                  className="w-full h-full cursor-pointer"
+                  onClick={() =>
+                    setModalVideo({
+                      src: service.videoUrl,
+                      poster: service.imageUrl,
+                    })
+                  }
+                >
+                  <video
+                    className="w-full h-full object-cover pointer-events-none"
+                    poster={service.imageUrl}
+                  >
+                    <source src={service.videoUrl} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/40">
+                    <svg
+                      className="w-16 h-16 text-white opacity-80"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <polygon points="9.5,7.5 16.5,12 9.5,16.5" />
+                    </svg>
+                  </div>
+                </div>
+              ) : (
                 <Image
                   src={service.imageUrl}
                   alt={service.title}
-                  width={600}
-                  height={400}
-                  className="w-full h-48 object-cover transition-transform duration-300 transform group-hover:scale-110"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   priority
                 />
+              )}
+            </div>
+            {/* Content */}
+            <div className="w-full md:w-1/2 p-8 flex flex-col justify-center">
+              <h3 className="text-2xl font-semibold text-gray-900 mb-2">
+                {service.title}
+              </h3>
+              <div className="w-12 h-1 bg-orange-300 rounded mb-4" />
+              <div className="mb-3 text-gray-700 font-medium">
+                Service Features
               </div>
-              {/* Content with animated opacity */}
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-800 mb-2 transition-colors duration-300 group-hover:text-red-500">
-                  {service.title}
-                </h3>
-                <p className="text-gray-600 transition-opacity duration-300 group-hover:opacity-75">
-                  {service.description}
-                </p>
+              <div className="flex flex-wrap gap-2 mb-6">
+                {service.tags.map((tag, i) => (
+                  <span
+                    key={i}
+                    className="bg-gray-100 text-gray-700 text-xs px-3 py-1 rounded-full border border-gray-200"
+                  >
+                    {tag}
+                  </span>
+                ))}
               </div>
-              {/* Decorative underline that appears on hover */}
-              <motion.div className="absolute bottom-0 left-0 w-full h-1 bg-red-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
-            </motion.div>
-          ))}
-        </div>
+              <a
+                href={service.link}
+                className="text-orange-500 font-semibold hover:underline flex items-center gap-1 text-sm"
+              >
+                View Service Details
+                <svg
+                  className="w-4 h-4 ml-1"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+              </a>
+            </div>
+          </motion.div>
+        ))}
       </div>
+      {/* Video Modal */}
+      {modalVideo && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70">
+          <div className="relative w-full max-w-3xl h-1/2 bg-black rounded-2xl flex items-center justify-center">
+            <button
+              className="absolute top-4 right-4 text-white text-3xl z-10"
+              onClick={() => setModalVideo(null)}
+              aria-label="Close video"
+            >
+              &times;
+            </button>
+            <video
+              controls
+              autoPlay
+              className="w-full h-full object-contain rounded-2xl bg-black"
+              poster={modalVideo.poster}
+            >
+              <source src={modalVideo.src} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      )}
     </section>
   );
 };

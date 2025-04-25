@@ -6,7 +6,7 @@ const HeroSection = () => {
   return (
     <section
       className="relative min-h-screen bg-cover bg-center"
-      style={{ backgroundImage: 'url("/tireStore.jpg")' }}
+      style={{ backgroundImage: 'url("/shop3.jpg")' }}
     >
       {/* Overlay for darkening the background */}
       <div className="absolute inset-0 bg-black bg-opacity-70"></div>

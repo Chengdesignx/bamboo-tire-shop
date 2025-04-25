@@ -1,6 +1,7 @@
 import { Award, Clock, Truck, Wrench } from 'lucide-react';
 import Image from 'next/image';
 import React from 'react';
+import { author } from '@/lib/content/portfolio';
 
 export default function About() {
   return (
@@ -13,7 +14,7 @@ export default function About() {
         >
           <div className="absolute inset-0 bg-black bg-opacity-40"></div>
           <div className="relative z-10">
-            <h1 className="text-4xl font-bold text-white mb-4">About Destiny Tire shop</h1>
+            <h1 className="text-4xl font-bold text-white mb-4">About {author.name}</h1>
             <p className="text-xl text-gray-200 max-w-3xl mx-auto">
               Your trusted mobile tire and brake service provider in Maryland, bringing professional auto care directly to your location.
             </p>
@@ -47,7 +48,7 @@ export default function About() {
               height={600}
             />
             <video
-              src="v1.mp4"
+              src="/about.mp4"
               className="rounded-lg shadow-lg w-full h-[300px] object-cover"
               autoPlay
               muted
@@ -95,7 +96,7 @@ export default function About() {
           <h2 className="text-3xl font-bold text-center mb-8">Our Commitment to Excellence</h2>
           <div className="space-y-6 text-gray-600">
             <p>
-              Destiny Tire shop is a premier mobile tire and brake service provider serving Maryland and surrounding areas. Our state-of-the-art mobile service van is equipped with the latest tools and technology to provide comprehensive tire and brake services at your convenience.
+              {author.name} is a premier mobile tire and brake service provider serving Maryland and surrounding areas. Our state-of-the-art mobile service van is equipped with the latest tools and technology to provide comprehensive tire and brake services at your convenience.
             </p>
             <p>
               We understand that tire and brake issues can occur at any time, which is why we offer 24/7 emergency services. Our team of certified technicians brings years of experience and expertise directly to your location, whether you're at home, work, or stranded on the road.
@@ -104,7 +105,7 @@ export default function About() {
               From tire installations and rotations to brake pad replacements and rotor services, we handle it all with professional precision. Our mobile service eliminates the hassle of visiting a traditional shop, saving you valuable time while delivering the same high-quality service you expect.
             </p>
             <p>
-              At Destiny Tire shop, we pride ourselves on our commitment to customer satisfaction, transparent pricing, and reliable service. When you choose us, you're choosing a team that puts your safety and convenience first.
+              At {author.name}, we pride ourselves on our commitment to customer satisfaction, transparent pricing, and reliable service. When you choose us, you're choosing a team that puts your safety and convenience first.
             </p>
           </div>
         </div>

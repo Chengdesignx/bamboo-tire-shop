@@ -1,5 +1,6 @@
 'use client';
 import { Button } from '@/components/ui/button';
+import { author } from '@/lib/content/portfolio';
 
 import { Car, Phone, RotateCw, Wrench } from 'lucide-react';
 import Image from 'next/image';
@@ -80,7 +81,7 @@ export default function ContactUs() {
                         href="tel:240-779-5349"
                         className="hover:text-white transition-colors"
                       >
-                        (240) 779-5349
+                        {author.phone}
                       </a>
                     </p>
                   </div>

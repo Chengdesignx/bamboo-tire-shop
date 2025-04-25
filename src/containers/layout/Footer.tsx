@@ -9,6 +9,7 @@ import {
   Twitter,
 } from 'lucide-react';
 import Link from 'next/link';
+import { author } from '@/lib/content/portfolio';
 import React from 'react';
 
 export default function Footer() {
@@ -21,7 +22,7 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <h3 className="text-white text-lg font-bold mb-4">
-              Destiny Tire shop
+              {author.name}
             </h3>
             <p className="mb-4">
               Professional mobile tire and brake services, bringing expert auto
@@ -104,16 +105,16 @@ export default function Footer() {
                   href="tel:240-779-5349"
                   className="hover:text-white transition-colors"
                 >
-                  671116769
+                  {author.phone}
                 </a>
               </li>
               <li className="flex items-center">
                 <Mail className="w-5 h-5 mr-2" />
                 <a
-                  href="mailto:infodestinytireshop.com"
+                  href={`mailto:${author.email}`}
                   className="hover:text-white transition-colors"
                 >
-                  info@Destinytireshop.com
+                  {author.email}
                 </a>
               </li>
               <li className="flex items-center">
@@ -127,7 +128,7 @@ export default function Footer() {
         {/* Copyright */}
         <div className="border-t border-gray-800 pt-8">
           <p className="text-center text-sm">
-            © {currentYear} Destiny Tire shop. All rights reserved.
+            © {currentYear} {author.name}. All rights reserved.
           </p>
         </div>
       </div>

@@ -1,8 +1,9 @@
 import { Clock, MapPin, MessageSquare,Phone } from 'lucide-react';
 import React from 'react';
+import { author } from '@/lib/content/portfolio';
 
 export default function ContactUs() {
-  const whatsappNumber = "671116769"; // Remove any special characters from phone number
+  const whatsappNumber = author.phone.replace(/\D/g, ''); // Remove any special characters from phone number
   const whatsappMessage = "Hello! I need assistance with tire or brake service.";
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
@@ -25,10 +26,10 @@ export default function ContactUs() {
             <h3 className="text-xl font-bold mb-2">Call Us</h3>
             <p className="text-gray-600 mb-4">Available 24/7 for emergencies</p>
             <a 
-              href="tel:671116769" 
+              href={`tel:${author.phone}`} 
               className="text-lg font-semibold text-red-600 hover:text-red-700"
             >
-              671116769
+              {author.phone}
             </a>
           </div>
 
@@ -88,18 +89,16 @@ export default function ContactUs() {
           </div>
         </div>
 
-        {/* Google Maps
-        <div className="rounded-xl overflow-hidden shadow-lg h-[400px]">
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3108.2693744423036!2d-76.94724212536362!3d38.82629125089872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7bbdcf9457fc7%3A0xe0a3e95aedde005e!2s4534%20St%20Barnabas%20Rd%2C%20Marlow%20Heights%2C%20MD%2020748%2C%20USA!5e0!3m2!1sen!2scm!4v1732198240363!5m2!1sen!2scm"
-            width="100%"
-            height="100%"
-            style={{ border: 0 }}
-            allowFullScreen={true}
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          />
-        </div> */}
+        {/* Google Maps */}
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3108.2693744423036!2d-76.94724212536362!3d38.82629125089872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7bdeeefe730c1:0x46e12861dc376e58!2s4534+St+Barnabas+Rd%2C+Marlow+Heights%2C+MD+20748%2C+USA!5e0!3m2!1sen!2scm!4v1732198240363!5m2!1sen!2scm"
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          allowFullScreen={true}
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        />
       </div>
     </div>
   );

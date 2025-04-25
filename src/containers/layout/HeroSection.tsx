@@ -1,67 +1,62 @@
 'use client';
+
 import { motion } from 'framer-motion';
 import React from 'react';
 
 const HeroSection = () => {
   return (
     <section
-      className="relative min-h-screen bg-cover bg-center"
+      className="relative min-h-screen bg-cover bg-center flex items-center justify-center"
       style={{ backgroundImage: 'url("/shop3.jpg")' }}
     >
-      {/* Overlay for darkening the background */}
-      <div className="absolute inset-0 bg-black bg-opacity-70"></div>
+      {/* Gradient + Blur Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80 backdrop-blur-sm"></div>
 
-      {/* Main Content */}
-      <div className="relative flex flex-col justify-center min-h-screen px-4 sm:px-6 lg:px-8 py-20 sm:py-24 text-white">
-        <div className="max-w-7xl mx-auto w-full">
-          {/* Main Title */}
-          <motion.h1
-            className="text-5xl sm:text-5xl md:text-5xl lg:text-6xl font-black leading-tight sm:leading-tight md:leading-tight lg:leading-tight mb-6 max-w-4xl mx-auto lg:mx-0"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            Fast, Reliable, and{' '}
-            <span className="text-[#F74231] italic">Convenient</span>{' '}
-            <span className="bg-gradient-to-r from-[#F78731] to-[#F74231] text-transparent bg-clip-text">
-              Auto Care
-            </span>{' '}
-            <span className="block sm:inline">at Your Doorstep</span>
-          </motion.h1>
+      {/* Content Card */}
+      <motion.div
+        className="relative z-10 max-w-4xl px-8 py-16 rounded-3xl bg-white/5 backdrop-blur-xl border border-white/10 text-center text-white shadow-2xl"
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        <motion.h1
+          className="text-4xl md:text-6xl font-serif font-bold leading-tight mb-6"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
+          Fast, Reliable, and{' '}
+          <span className="text-orange-400 italic">Convenient</span>{' '}
+          <span className="bg-gradient-to-r from-orange-400 to-orange-600 text-transparent bg-clip-text">
+            Auto Care
+          </span>{' '}
+          at Your Doorstep
+        </motion.h1>
 
-          {/* Description */}
-          <motion.p
-            className="text-base sm:text-xl md:text-xl mb-8 max-w-2xl font-light tracking-wide mx-auto lg:mx-0"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-          >
-            We provide hassle-free mobile tire and brake services at your home,
-            office, or anywhere you need us. Save time and avoid the stress of
-            visiting a shop.
-          </motion.p>
+        <motion.p
+          className="text-lg md:text-xl font-light text-gray-300 mb-8 max-w-2xl mx-auto"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+        >
+          We provide hassle-free mobile tire and brake services at your home,
+          office, or wherever you are. Save time and skip the stress.
+        </motion.p>
 
-          {/* Call-to-action button */}
-          <motion.div
-            className="flex justify-center lg:justify-start"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
+        <motion.div
+          className="flex justify-center"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+        >
+          <a
+            href="/contact"
+            className="inline-block bg-gradient-to-r from-orange-400 to-orange-600 text-white py-4 px-10 rounded-full text-lg font-medium shadow-lg hover:scale-105 transition-transform duration-300"
           >
-            <a
-              href="/contact"
-              className="inline-block bg-transparent hover:bg-[#F78731] text-white 
-                py-3 sm:py-4 px-8 sm:px-12 rounded-full 
-                text-base sm:text-lg transition-all duration-300 
-                border-2 border-[#F74231] hover:border-[#F78731] 
-                transform hover:scale-105 hover:shadow-lg text-center
-                whitespace-nowrap"
-            >
-              Contact Us
-            </a>
-          </motion.div>
-        </div>
-      </div>
+            Contact Us
+          </a>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };

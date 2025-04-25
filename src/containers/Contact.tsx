@@ -1,6 +1,7 @@
 'use client';
-import { Button } from '@/components/ui/button';
 import { author } from '@/lib/content/portfolio';
+
+import { Button } from '@/components/ui/button';
 
 import { Car, Phone, RotateCw, Wrench } from 'lucide-react';
 import Image from 'next/image';

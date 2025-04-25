@@ -9,7 +9,7 @@ const services = [
     title: 'Brake Change',
     description:
       'Expert brake change service with premium-quality parts for your safety and confidence on every drive.',
-    imageUrl: '/tireman.png',
+    imageUrl: '/brakechange.png',
     videoUrl: '/v2.mp4',
     tags: [
       'Brake Inspection',
@@ -23,7 +23,7 @@ const services = [
     title: 'Full Tire Service',
     description:
       'Comprehensive tire care including installation, rotation, and balancing for optimal performance and safety.',
-    imageUrl: '/tireMachines.jpg',
+    imageUrl: '',
     videoUrl: '/v1.mp4',
     tags: [
       'Tire Installation',
@@ -94,26 +94,30 @@ const ServiceSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: idx * 0.1 }}
           >
-            {/* Media Section (Image or Video) */}
+            {/* Media Section (Image or Video Preview) */}
             <div className="w-full md:w-1/2 h-64 md:h-80 relative">
               {service.videoUrl ? (
-                <div
-                  className="w-full h-full cursor-pointer"
-                  onClick={() =>
-                    setModalVideo({
-                      src: service.videoUrl,
-                      poster: service.imageUrl,
-                    })
-                  }
-                >
+                <div className="w-full h-full relative group">
                   <video
-                    className="w-full h-full object-cover pointer-events-none"
+                    className="w-full h-full object-cover rounded-2xl"
                     poster={service.imageUrl}
+                    muted
+                    loop
+                    playsInline
                   >
                     <source src={service.videoUrl} type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
-                  <div className="absolute inset-0 flex items-center justify-center bg-black/40">
+                  <button
+                    className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity"
+                    onClick={() =>
+                      setModalVideo({
+                        src: service.videoUrl,
+                        poster: service.imageUrl,
+                      })
+                    }
+                    aria-label="Play video"
+                  >
                     <svg
                       className="w-16 h-16 text-white opacity-80"
                       fill="currentColor"
@@ -121,7 +125,7 @@ const ServiceSection = () => {
                     >
                       <polygon points="9.5,7.5 16.5,12 9.5,16.5" />
                     </svg>
-                  </div>
+                  </button>
                 </div>
               ) : (
                 <Image

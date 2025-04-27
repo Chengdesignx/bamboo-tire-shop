@@ -25,12 +25,7 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          Fast, Reliable, and{' '}
-          <span className="text-orange-400 italic">Convenient</span>{' '}
-          <span className="bg-gradient-to-r from-orange-400 to-orange-600 text-transparent bg-clip-text">
-            Auto Care
-          </span>{' '}
-          at Your Doorstep
+          Big Daddy Tires Shop, at your disposal.
         </motion.h1>
 
         <motion.p
@@ -39,8 +34,11 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          We provide hassle-free mobile tire and brake services at your home,
-          office, or wherever you are. Save time and skip the stress.
+          Get any tire of your choice at an affordable price.
+          <br />
+          We provide tire repairs and tires purchase services at your home,
+          office or any point of need. Save time and just contact us and talk
+          about your needs and we shall get to instantly.
         </motion.p>
 
         <motion.div

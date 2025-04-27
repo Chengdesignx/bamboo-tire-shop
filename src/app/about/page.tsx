@@ -29,15 +29,15 @@ export default function About() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           <div className="space-y-8">
             <Image
-              src="/tirechange2.jpg"
-              alt="Destiny Tire shop Service Van"
+              src="/tirechange2.png"
+              alt={`${author.name} Service Van`}
               className="rounded-lg shadow-lg w-full h-[300px] object-cover"
               width={800}
               height={600}
             />
             <Image
-              src="/shop.jpg"
-              alt="Mobile Service in Action"
+              src="/shop3.jpg"
+              alt={`${author.name} Mobile Service in Action`}
               className="rounded-lg shadow-lg w-full h-[300px] object-cover"
               width={800}
               height={600}

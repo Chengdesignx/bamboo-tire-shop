@@ -79,7 +79,7 @@ export default function ContactUs() {
                     <h3 className="font-medium">Contact</h3>
                     <p className="text-gray-300">
                       <a
-                        href="tel:240-779-5349"
+                        href={`tel:${author.phone}`}
                         className="hover:text-white transition-colors"
                       >
                         {author.phone}

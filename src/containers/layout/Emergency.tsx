@@ -1,6 +1,7 @@
+import { author } from '@/lib/content/portfolio';
+
 import { Phone } from 'lucide-react';
 import React from 'react';
-import { author } from '@/lib/content/portfolio';
 
 export default function Emergency() {
   return (
@@ -12,7 +13,7 @@ export default function Emergency() {
             We're available 24/7 for all your tire and brake needs
           </p>
           <a
-            href="tel:671116769"
+            href={`tel:${author.phone}`}
             className="inline-flex items-center px-8 py-4 border border-transparent text-lg font-medium rounded-md text-white bg-red-500 hover:bg-red-600 animate-bounce"
           >
             <Phone className="w-5 h-5 mr-2" />

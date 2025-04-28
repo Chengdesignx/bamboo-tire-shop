@@ -1,5 +1,7 @@
 // /components/Testimonials.js
 
+import { author } from '@/lib/content/portfolio';
+
 import { Star } from 'lucide-react';
 import Image from 'next/image';
 import React from 'react';
@@ -50,8 +52,7 @@ export function Testimonials() {
     {
       name: 'Sarah Johnson',
       role: 'Vehicle Owner',
-      content:
-        'Destiny Tire shop saved my day! They came to my office parking lot and replaced my flat tire in under an hour. Professional, quick, and incredibly convenient service.',
+      content: `${author.name} saved my day! They came to my office parking lot and replaced my flat tire in under an hour. Professional, quick, and incredibly convenient service.`,
       rating: 5,
       image:
         'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&h=150',

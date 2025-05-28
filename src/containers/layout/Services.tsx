@@ -6,63 +6,45 @@ import { useState } from 'react';
 
 const services = [
   {
-    title: 'Brake Change',
+    title: 'Mobile Auto Mechanic',
     description:
-      'Expert brake change service with premium-quality parts for your safety and confidence on every drive.',
-    imageUrl: '/brakechange.png',
+      'Professional mobile auto repair services at your location. Our experienced technicians bring expert care directly to you.',
+    imageUrl: '/p1.jpg',
+    videoUrl: '/about.mp4',
+    tags: [
+      'General Repairs',
+      'Diagnostics',
+      'Maintenance',
+      'Emergency Service',
+    ],
+    link: '/services',
+  },
+  {
+    title: 'Brake Checks',
+    description:
+      'Comprehensive brake inspection and maintenance services. We ensure your vehicle\'s braking system is in optimal condition for your safety.',
+    imageUrl: '/brakechange.jpg',
     videoUrl: '/v2.mp4',
     tags: [
       'Brake Inspection',
       'Pad Replacement',
-      'Rotor Replacement',
-      'Fluid Top-up',
+      'Rotor Service',
+      'Fluid Check',
     ],
     link: '/services',
   },
   {
-    title: 'Full Tire Service',
+    title: 'Mobile Tire Mechanic',
     description:
-      'Comprehensive tire care including installation, rotation, and balancing for optimal performance and safety.',
-    imageUrl: '',
-    videoUrl: '/v1.mp4',
-    tags: [
-      'Tire Installation',
-      'Tire Rotation',
-      'Tire Balancing',
-      'Pressure Check',
-    ],
-    link: '/services',
-  },
-  {
-    title: 'Tire Sales',
-    description:
-      'Wide range of high-quality tires for all vehicle types. We help you find the perfect match for your needs.',
-    imageUrl: '/shop3.jpg',
-    videoUrl: '',
-    tags: ['All Brands', 'All Sizes', 'Expert Advice', 'Affordable Prices'],
-    link: '/services',
-  },
-  {
-    title: 'Tire Change',
-    description:
-      'Quick and hassle-free tire change services, ensuring precision and quality for a seamless experience.',
+      'Expert tire service and repairs at your location. From installation to maintenance, we handle all your tire needs.',
     imageUrl: '/tirechange.jpg',
     videoUrl: '/v1.mp4',
     tags: [
-      'On-site Service',
-      'Fast Replacement',
+      'Tire Installation',
+      'Tire Repair',
+      'Tire Rotation',
       'Wheel Alignment',
-      'Valve Check',
     ],
-    link: '/services',
-  },
-  {
-    title: 'Tire Repair',
-    description:
-      'Extend the life of your tires with expert repair services. We restore your tires to peak condition for safe travels.',
-    imageUrl: '/shop.jpg',
-    videoUrl: '',
-    tags: ['Puncture Repair', 'Leak Fix', 'Tread Inspection', 'Patch & Plug'],
     link: '/services',
   },
 ];

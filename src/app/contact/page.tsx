@@ -1,4 +1,4 @@
-import { Clock, MapPin, MessageSquare,Phone } from 'lucide-react';
+import { Clock, MapPin, MessageSquare, Phone } from 'lucide-react';
 import React from 'react';
 import { author } from '@/lib/content/portfolio';
 
@@ -25,8 +25,8 @@ export default function ContactUs() {
             </div>
             <h3 className="text-xl font-bold mb-2">Call Us</h3>
             <p className="text-gray-600 mb-4">Available 24/7 for emergencies</p>
-            <a 
-              href={`tel:${author.phone}`} 
+            <a
+              href={`tel:${author.phone}`}
               className="text-lg font-semibold text-red-600 hover:text-red-700"
             >
               {author.phone}
@@ -40,7 +40,7 @@ export default function ContactUs() {
             </div>
             <h3 className="text-xl font-bold mb-2">WhatsApp</h3>
             <p className="text-gray-600 mb-4">Chat with us instantly</p>
-            <a 
+            <a
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
@@ -74,7 +74,7 @@ export default function ContactUs() {
                   <span className="font-medium">Monday - Sunday</span>
                   <span className="text-gray-600">8:00 AM - 10:00 PM</span>
                 </div>
-                
+
               </div>
               <div className="bg-red-50 p-6 rounded-lg">
                 <div className="flex items-center mb-4">
@@ -90,10 +90,10 @@ export default function ContactUs() {
         </div>
 
         {/* Google Maps */}
-        <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3108.2693744423036!2d-76.94724212536362!3d38.82629125089872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7bdeeefe730c1:0x46e12861dc376e58!2s4534+St+Barnabas+Rd%2C+Marlow+Heights%2C+MD+20748%2C+USA!5e0!3m2!1sen!2scm!4v1732198240363!5m2!1sen!2scm"
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3101.2693744423036!2d-76.94724212536362!3d38.82629125089872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7bdeeefe730c1:0x46e12861dc376e58!2s5920%20Somerset%20Rd%2C%20Riverdale%2C%20MD%2020737%2C%20USA!5e0!3m2!1sen!2sus!4v1732198240363!5m2!1sen!2sus"
           width="100%"
-          height="100%"
+          height="450"
           style={{ border: 0 }}
           allowFullScreen={true}
           loading="lazy"

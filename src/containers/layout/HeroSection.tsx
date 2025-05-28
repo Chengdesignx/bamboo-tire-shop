@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import React from 'react';
+import { author } from '@/lib/content/portfolio';
 
 const HeroSection = () => {
   return (
@@ -25,7 +26,7 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          Big Daddy Tires Shop, at your disposal.
+          {author.name} at your disposal.
         </motion.h1>
 
         <motion.p

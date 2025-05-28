@@ -49,27 +49,27 @@ export default function ContactUs() {
                 <div className="flex items-start">
                   <Car className="mr-4 h-6 w-6 text-red-500" />
                   <div>
-                    <h3 className="font-medium">Mobile Tire Service</h3>
+                    <h3 className="font-medium">Mobile Auto Mechanic</h3>
                     <p className="text-gray-300">
-                      Professional tire service at your location
+                      Professional auto repair services at your location
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <Wrench className="mr-4 h-6 w-6 text-red-500" />
                   <div>
-                    <h3 className="font-medium">Brake and Rotor Changes</h3>
+                    <h3 className="font-medium">Brake Checks</h3>
                     <p className="text-gray-300">
-                      Complete brake service and maintenance
+                      Comprehensive brake inspection and maintenance
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <RotateCw className="mr-4 h-6 w-6 text-red-500" />
                   <div>
-                    <h3 className="font-medium">Rotate & Balance</h3>
+                    <h3 className="font-medium">Mobile Tire Mechanic</h3>
                     <p className="text-gray-300">
-                      Professional tire rotation and balancing
+                      Expert tire service and repairs at your location
                     </p>
                   </div>
                 </div>
@@ -104,9 +104,9 @@ export default function ContactUs() {
           <Button
             size="lg"
             className="bg-red-600 hover:bg-red-700"
-            onClick={() => (window.location.href = 'tel:240-779-5349')}
+            onClick={() => (window.location.href = 'tel:240-501-4795')}
           >
-            Call Now: (240) 779-5349
+            Call Now: (240) 501-4795
           </Button>
         </div>
       </div>

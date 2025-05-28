@@ -8,28 +8,43 @@ import React from 'react';
 
 const services = [
   {
-    title: 'Brake Services',
+    title: 'Mobile Auto Mechanic',
     description:
-      "Expert brake services including pad replacement, rotor service, and complete system diagnostics. We ensure your vehicle's stopping power is always at its best.",
+      'Professional mobile auto repair services at your location. Our experienced technicians bring expert care directly to you.',
     features: [
-      'Brake Pad Replacement',
-      'Brake Rotor Service',
-      'Brake Fluid Exchange',
-      'Brake System Inspection',
-      'Emergency Brake Repair',
+      'General Auto Repairs',
+      'Diagnostic Services',
+      'Preventive Maintenance',
+      'Emergency Repairs',
+      '24/7 Mobile Service',
     ],
-    videoUrl: '/v2.mp4',
-    imageUrl: '/tireman.png',
+    videoUrl: '/about.mp4',
+    imageUrl: '/tirechange2.jpg',
     icon: <Wrench className="w-8 h-8 text-blue-600" />,
   },
   {
-    title: 'Tire Services',
+    title: 'Brake Checks',
     description:
-      'Comprehensive tire care from installation to maintenance. We help you choose and maintain the perfect tires for your vehicle and driving needs.',
+      'Comprehensive brake inspection and maintenance services. We ensure your vehicle\'s braking system is in optimal condition for your safety.',
+    features: [
+      'Brake System Inspection',
+      'Brake Pad Replacement',
+      'Rotor Service',
+      'Brake Fluid Check',
+      'Emergency Brake Repair',
+    ],
+    videoUrl: '/v2.mp4',
+    imageUrl: '/tirechange.jpg',
+    icon: <Car className="w-8 h-8 text-red-600" />,
+  },
+  {
+    title: 'Mobile Tire Mechanic',
+    description:
+      'Expert tire service and repairs at your location. From installation to maintenance, we handle all your tire needs.',
     features: [
       'Tire Installation',
+      'Tire Repair',
       'Tire Rotation',
-      'Tire Balancing',
       'Wheel Alignment',
       'Pressure Monitoring',
     ],

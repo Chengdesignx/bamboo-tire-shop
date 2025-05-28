@@ -15,15 +15,15 @@ export const socialLinks: StringKeyValueType = {
 };
 
 export const author = {
-  name: 'Big Daddy Tires',
+  name: 'Bamboo Tire Shop',
   email: '',
-  phone: '+1 (240) 467-8469',
+  phone: '+1 (240) 501-4795',
 };
 
 export const seoData = {
-  title: 'Big Daddy tires to sell in maryland',
+  title: 'Bamboo Tire Shop - Your Mobile Tire Solution in Maryland',
   description:
-    ' Big Daddy tires and rakes number one tire solution in maryland',
+    'Bamboo Tire Shop - Your number one tire solution in Maryland',
   author: author.name,
   image:
     '/carContact.jpg',
@@ -34,7 +34,7 @@ export const seoData = {
     '@maryland',
     'tires',
     'fix CAR IN MARYLAND',
-    ' Big Daddy tires',
+    'Bamboo Tire Shop',
     'mechanic beside me',
   ],
 };

@@ -29,7 +29,7 @@ export default function About() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           <div className="space-y-8">
             <Image
-              src="/tirechange2.png"
+              src="/tirechange2.jpg"
               alt={`${author.name} Service Van`}
               className="rounded-lg shadow-lg w-full h-[300px] object-cover"
               width={800}
@@ -45,7 +45,7 @@ export default function About() {
           </div>
           <div className="space-y-8">
             <Image
-              src="/shop3.jpg"
+              src="/shop.jpg"
               alt="Tire Balancing Service"
               className="rounded-lg shadow-lg w-full h-[300px] object-cover"
               width={800}

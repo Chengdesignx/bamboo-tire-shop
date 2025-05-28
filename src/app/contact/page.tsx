@@ -57,9 +57,9 @@ export default function ContactUs() {
               <MapPin className="w-8 h-8 text-blue-600" />
             </div>
             <h3 className="text-xl font-bold mb-2">Service Area</h3>
-            <p className="text-gray-600 mb-4">Mobile service throughout Maryland</p>
+            <p className="text-gray-600 mb-4">Greenbelt, MD 20770, United States</p>
             <p className="text-gray-700">
-              We come to your location for all tire and brake services
+              We come to your location for all tire and brake services throughout Maryland
             </p>
           </div>
         </div>
@@ -72,7 +72,7 @@ export default function ContactUs() {
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
                   <span className="font-medium">Monday - Sunday</span>
-                  <span className="text-gray-600">8:00 AM - 10:00 PM</span>
+                  <span className="text-gray-600">24/7</span>
                 </div>
 
               </div>
@@ -91,7 +91,7 @@ export default function ContactUs() {
 
         {/* Google Maps */}
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3101.2693744423036!2d-76.94724212536362!3d38.82629125089872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7bdeeefe730c1:0x46e12861dc376e58!2s5920%20Somerset%20Rd%2C%20Riverdale%2C%20MD%2020737!5e0!3m2!1sen!2sus!4v1732198240363!5m2!1sen!2sus"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49573.31595461542!2d-76.93611277944793!3d39.00437905490362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7c3f90c535b85%3A0x713f5e600a24b1d8!2sGreenbelt%2C%20MD%2020770!5e0!3m2!1sen!2sus!4v1684951468973!5m2!1sen!2sus"
           width="100%"
           height="450"
           style={{ border: 0 }}

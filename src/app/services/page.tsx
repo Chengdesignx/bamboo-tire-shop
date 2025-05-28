@@ -8,47 +8,77 @@ import React from 'react';
 
 const services = [
   {
-    title: 'Mobile Auto Mechanic',
+    title: 'Tire Change',
     description:
-      'Professional mobile auto repair services at your location. Our experienced technicians bring expert care directly to you.',
+      'Professional tire change service at your location. Our experienced technicians will safely replace your tires with precision and care.',
     features: [
-      'General Auto Repairs',
-      'Diagnostic Services',
-      'Preventive Maintenance',
-      'Emergency Repairs',
-      '24/7 Mobile Service',
+      'On-site tire replacement',
+      'All tire sizes and types',
+      'Professional equipment',
+      'Quick service',
+      'Emergency assistance',
     ],
-    videoUrl: '/about.mp4',
-    imageUrl: '/tirechange2.jpg',
-    icon: <Wrench className="w-8 h-8 text-blue-600" />,
-  },
-  {
-    title: 'Brake Checks',
-    description:
-      'Comprehensive brake inspection and maintenance services. We ensure your vehicle\'s braking system is in optimal condition for your safety.',
-    features: [
-      'Brake System Inspection',
-      'Brake Pad Replacement',
-      'Rotor Service',
-      'Brake Fluid Check',
-      'Emergency Brake Repair',
-    ],
-    videoUrl: '/v2.mp4',
+    videoUrl: '/v1.mp4',
     imageUrl: '/tirechange.jpg',
     icon: <Car className="w-8 h-8 text-red-600" />,
   },
   {
-    title: 'Mobile Tire Mechanic',
+    title: 'Tire Balancing',
     description:
-      'Expert tire service and repairs at your location. From installation to maintenance, we handle all your tire needs.',
+      'Expert tire balancing service to ensure smooth rides and even tire wear. We use state-of-the-art equipment for precise balancing.',
     features: [
-      'Tire Installation',
-      'Tire Repair',
-      'Tire Rotation',
-      'Wheel Alignment',
-      'Pressure Monitoring',
+      'Wheel balancing',
+      'Vibration elimination',
+      'Extended tire life',
+      'Improved handling',
+      'Better fuel efficiency',
+    ],
+    videoUrl: '/v2.mp4',
+    imageUrl: '/tireMachines.jpg',
+    icon: <Wrench className="w-8 h-8 text-blue-600" />,
+  },
+  {
+    title: 'PSI Service',
+    description:
+      'Professional tire pressure service to maintain optimal PSI levels for safety and performance. We ensure your tires are properly inflated.',
+    features: [
+      'Pressure check',
+      'Inflation service',
+      'TPMS diagnosis',
+      'Pressure monitoring',
+      'Safety inspection',
+    ],
+    videoUrl: '/about.mp4',
+    imageUrl: '/tirechange2.jpg',
+    icon: <Car className="w-8 h-8 text-red-600" />,
+  },
+  {
+    title: 'Jump Start',
+    description:
+      'Quick and reliable jump start service when you need it most. Our professional team will get your vehicle running again safely.',
+    features: [
+      'Emergency response',
+      'Safe jump starting',
+      'Battery testing',
+      '24/7 availability',
+      'Professional equipment',
     ],
     videoUrl: '/v1.mp4',
+    imageUrl: '/tirechange.jpg',
+    icon: <Car className="w-8 h-8 text-red-600" />,
+  },
+  {
+    title: 'Gas Service',
+    description:
+      'Emergency fuel delivery service when you run out of gas. We\'ll bring the fuel you need directly to your location.',
+    features: [
+      'Fuel delivery',
+      'Multiple fuel types',
+      'Quick response',
+      'Any location',
+      'Emergency assistance',
+    ],
+    videoUrl: '/v2.mp4',
     imageUrl: '/tireMachines.jpg',
     icon: <Car className="w-8 h-8 text-red-600" />,
   },

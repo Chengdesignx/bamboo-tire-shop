@@ -1,7 +1,4 @@
-'use client';
 import { author } from '@/lib/content/portfolio';
-
-import { motion } from 'framer-motion';
 import { Car, Check, Clock, Shield, Wrench } from 'lucide-react';
 import Image from 'next/image';
 import React from 'react';
@@ -121,12 +118,7 @@ export default function ServicesPage() {
         >
           <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-black/50">
             <div className="h-full flex items-center justify-center">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                className="text-center text-white"
-              >
+              <div className="text-center text-white animate-fade-in">
                 <h1 className="text-5xl font-bold mb-6">
                   {author.name} Services
                 </h1>
@@ -134,7 +126,7 @@ export default function ServicesPage() {
                   Professional mobile tire and brake services at your
                   convenience. Available 24/7 for all your vehicle needs.
                 </p>
-              </motion.div>
+              </div>
             </div>
           </div>
         </div>
@@ -143,13 +135,9 @@ export default function ServicesPage() {
       {/* Main Services Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         {services.map((service, index) => (
-          <motion.div
+          <div
             key={index}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: index * 0.2 }}
-            className="mb-24 last:mb-0"
+            className="mb-24 last:mb-0 animate-fade-in-up"
           >
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="order-2 lg:order-1">
@@ -191,18 +179,12 @@ export default function ServicesPage() {
                 )}
               </div>
             </div>
-          </motion.div>
+          </div>
         ))}
 
         {/* Why Choose Us Section */}
         <div className="mt-32">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
+          <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-4xl font-bold mb-6">
               Why Choose Our Mobile Service?
             </h2>
@@ -211,24 +193,20 @@ export default function ServicesPage() {
               saving you time and ensuring convenience without compromising on
               quality.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((item, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="p-8 bg-gray-50 rounded-xl hover:shadow-lg transition-shadow"
+                className="p-8 bg-gray-50 rounded-xl hover:shadow-lg transition-shadow animate-fade-in-up"
               >
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-white rounded-full mb-6 text-red-600">
                   {item.icon}
                 </div>
                 <h3 className="text-xl font-semibold mb-4">{item.title}</h3>
                 <p className="text-gray-600">{item.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>

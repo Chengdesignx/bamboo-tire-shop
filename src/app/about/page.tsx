@@ -1,5 +1,4 @@
 import { author } from '@/lib/content/portfolio';
-
 import { Award, Clock, Truck, Wrench } from 'lucide-react';
 import Image from 'next/image';
 import React from 'react';

@@ -4,6 +4,9 @@ module.exports = {
   compress: true,
   poweredByHeader: false,
   generateEtags: true,
+  output: 'export',
+  trailingSlash: true,
+  skipTrailingSlashRedirect: true,
   images: {
     remotePatterns: [
       {

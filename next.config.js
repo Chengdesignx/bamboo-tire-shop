@@ -7,6 +7,7 @@ module.exports = {
   output: 'export',
   trailingSlash: true,
   skipTrailingSlashRedirect: true,
+  distDir: 'out',
   images: {
     remotePatterns: [
       {
@@ -42,26 +43,5 @@ module.exports = {
     ],
     formats: ['image/webp', 'image/avif'],
     minimumCacheTTL: 60,
-  },
-  headers: async () => {
-    return [
-      {
-        source: '/(.*)',
-        headers: [
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
-          {
-            key: 'X-Frame-Options',
-            value: 'DENY',
-          },
-          {
-            key: 'X-XSS-Protection',
-            value: '1; mode=block',
-          },
-        ],
-      },
-    ];
   },
 };

@@ -8,7 +8,7 @@ import { Phone, MapPin, Clock, Star } from 'lucide-react';
 const HeroSection = () => {
   return (
     <section
-      className="relative min-h-screen bg-cover bg-center flex items-center justify-center overflow-hidden pt-24 sm:pt-32 pb-8 px-4"
+      className="relative min-h-screen bg-cover bg-center flex items-center justify-center overflow-hidden pt-40 sm:pt-32 pb-8 px-4"
       style={{ backgroundImage: 'url("/shop3.jpg")' }}
     >
       {/* Enhanced Gradient + Blur Overlay */}

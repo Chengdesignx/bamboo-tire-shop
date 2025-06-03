@@ -51,7 +51,7 @@ const Navbar = () => {
       initial="hidden"
       animate="show"
       id="navbar"
-      className="fixed inset-x-0 top-8 z-50 mx-auto max-w-6xl px-6"
+      className="fixed inset-x-0 top-4 sm:top-8 z-50 mx-auto max-w-6xl px-4 sm:px-6"
     >
       <div className="flex items-center justify-between bg-white/80 backdrop-blur-2xl border border-white/30 rounded-2xl px-6 py-4 shadow-xl shadow-black/5">
         {/* Logo */}
@@ -130,7 +130,7 @@ const Navbar = () => {
                   <CLink
                     href={url}
                     onClick={() => setIsMenuOpen(false)}
-                    className="block w-full text-left px-5 py-4 text-gray-700 hover:text-orange-500 hover:bg-orange-50/50 rounded-xl transition-all duration-200 font-medium text-lg min-h-[48px] flex items-center active:scale-95"
+                    className="flex w-full text-left px-5 py-4 text-gray-700 hover:text-orange-500 hover:bg-orange-50/50 rounded-xl transition-all duration-200 font-medium text-lg min-h-[48px] items-center active:scale-95"
                   >
                     {name}
                   </CLink>

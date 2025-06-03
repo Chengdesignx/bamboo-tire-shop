@@ -7,7 +7,7 @@ module.exports = {
   output: 'export',
   trailingSlash: true,
   skipTrailingSlashRedirect: true,
-  distDir: 'out',
+  distDir: 'dist',
   images: {
     remotePatterns: [
       {

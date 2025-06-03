@@ -47,7 +47,7 @@ export default function ContactUs() {
               <h2 className="text-2xl font-semibold mb-6">Our Services</h2>
               <div className="space-y-4">
                 <div className="flex items-start">
-                  <Car className="mr-4 h-6 w-6 text-red-500" />
+                  <Car className="mr-4 h-6 w-6 text-[#FFF200]" />
                   <div>
                     <h3 className="font-medium">Mobile Auto Mechanic</h3>
                     <p className="text-gray-300">
@@ -56,7 +56,7 @@ export default function ContactUs() {
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <Wrench className="mr-4 h-6 w-6 text-red-500" />
+                  <Wrench className="mr-4 h-6 w-6 text-[#FFF200]" />
                   <div>
                     <h3 className="font-medium">Brake Checks</h3>
                     <p className="text-gray-300">
@@ -65,7 +65,7 @@ export default function ContactUs() {
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <RotateCw className="mr-4 h-6 w-6 text-red-500" />
+                  <RotateCw className="mr-4 h-6 w-6 text-[#FFF200]" />
                   <div>
                     <h3 className="font-medium">Mobile Tire Mechanic</h3>
                     <p className="text-gray-300">
@@ -74,13 +74,13 @@ export default function ContactUs() {
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <Phone className="mr-4 h-6 w-6 text-red-500" />
+                  <Phone className="mr-4 h-6 w-6 text-[#FFF200]" />
                   <div>
                     <h3 className="font-medium">Contact</h3>
                     <p className="text-gray-300">
                       <a
                         href={`tel:${author.phone}`}
-                        className="hover:text-white transition-colors"
+                        className="hover:text-[#FFF200] transition-colors"
                       >
                         {author.phone}
                       </a>
@@ -103,7 +103,7 @@ export default function ContactUs() {
           </p>
           <Button
             size="lg"
-            className="bg-red-600 hover:bg-red-700"
+            className="bg-[#FFF200] text-gray-900 hover:bg-[#FFF200]/80"
             onClick={() => (window.location.href = 'tel:240-501-4795')}
           >
             Call Now: (240) 501-4795

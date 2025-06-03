@@ -3,6 +3,8 @@ import fontVariables from '@/lib/utils/fonts';
 
 import Footer from '@/containers/layout/Footer';
 import Navbar from '@/containers/layout/Navbar';
+import StructuredData from '@/components/seo/StructuredData';
+import MobileOptimizer from '@/components/optimization/MobileOptimizer';
 
 import RootLayoutClient from '@/app/RootLayoutClient';
 
@@ -21,6 +23,13 @@ export const metadata: Metadata = {
   metadataBase: new URL(seoData.url),
   alternates: {
     canonical: seoData.url,
+  },
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 5,
+    userScalable: true,
+    viewportFit: 'cover',
   },
   openGraph: {
     type: 'website',
@@ -76,8 +85,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return <RootLayoutClient fontVariables={fontVariables}>
+    <MobileOptimizer />
+    <StructuredData />
     <Navbar />
     {children}
     <Footer />
-    </RootLayoutClient>;
+  </RootLayoutClient>;
 }

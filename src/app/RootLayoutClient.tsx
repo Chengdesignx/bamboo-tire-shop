@@ -20,7 +20,7 @@ export default function RootLayoutClient({
         <ThemeProvider>{children}</ThemeProvider>
         <ProgressBar
           height="4px"
-          color="#2299DD"
+          color="#FFF200"
           options={{ showSpinner: false }}
           shallowRouting
         />

@@ -2,34 +2,107 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Mobile Optimizations */
+@layer base {
+  /* Improve touch targets */
+  button,
+  a,
+  input,
+  textarea,
+  select {
+    @apply touch-manipulation;
+  }
+
+  /* Prevent zoom on input focus on iOS */
+  input,
+  textarea,
+  select {
+    font-size: 16px;
+  }
+
+  /* Smooth scrolling for mobile */
+  html {
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+  }
+
+  /* Prevent horizontal scroll */
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Better tap highlighting */
+  * {
+    -webkit-tap-highlight-color: rgba(247, 147, 26, 0.2);
+  }
+
+  /* Improve mobile performance */
+  * {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+
 @layer base {
   :root {
-    /* Light Theme */
+    /* Base Colors - Light Theme */
+    --color-primary: #f74231;
+    --color-primary-light: rgba(247, 66, 49, 0.1);
+    --color-primary-warm: #faa72c;
+    --color-primary-hot: #fa4622;
+
+    /* Accent Colors */
+    --color-accent-1: #f78731;
+    --color-accent-2: #f76431;
+    --color-accent-3: #f73170;
+
+    /* Background Colors */
     --color-bg: theme(colors.slate.50);
     --color-bg-secondary: theme(colors.white);
-    --color-accent: #f74231;
-    --color-accent-secondary: #f78731;
-    --color-accent-tertiary: #f76431;
-    --color-accent-quaternary: #f73170;
-    --color-accent-warm: #faa72c;
-    --color-accent-hot: #fa4622;
+
+    /* Text Colors */
     --color-text: theme(colors.slate.600);
-    --color-dark-1: theme(colors.slate.900);
-    --color-dark-2: theme(colors.slate.700);
-    --color-dark-3: theme(colors.slate.300);
+    --color-text-dark: theme(colors.slate.900);
+    --color-text-medium: theme(colors.slate.700);
+    --color-text-light: theme(colors.slate.300);
+
+    /* Utility Colors */
+    --color-surface: theme(colors.white);
+    --color-surface-hover: theme(colors.slate.100);
+    --color-border: theme(colors.slate.200);
+
+    /* Legacy Color Mappings (for compatibility) */
+    --color-accent: var(--color-primary);
+    --color-accent-light: var(--color-primary-light);
+    --color-accent-secondary: var(--color-accent-1);
+    --color-accent-tertiary: var(--color-accent-2);
+    --color-accent-quaternary: var(--color-accent-3);
+    --color-accent-warm: var(--color-primary-warm);
+    --color-accent-hot: var(--color-primary-hot);
+    --color-dark-1: var(--color-text-dark);
+    --color-dark-2: var(--color-text-medium);
+    --color-dark-3: var(--color-text-light);
+
+    /* Border Radius */
     --radius: 0.5rem;
   }
 
-  /* Dark Theme */
+  /* Dark Theme Overrides */
   .dark {
-    --color-bg: theme(colors.slate.50);
+    /* Background Colors */
+    --color-bg: theme(colors.slate.900);
     --color-bg-secondary: theme(colors.slate.800);
-    --color-accent: #f74231;
-    --color-accent-light: rgba(247, 66, 49, 0.1);
+
+    /* Text Colors */
     --color-text: theme(colors.slate.400);
-    --color-dark-1: theme(colors.slate.200);
-    --color-dark-2: theme(colors.slate.300);
-    --color-dark-3: theme(colors.slate.700);
+    --color-text-dark: theme(colors.slate.200);
+    --color-text-medium: theme(colors.slate.300);
+    --color-text-light: theme(colors.slate.700);
+
+    /* Utility Colors */
+    --color-surface: theme(colors.slate.800);
+    --color-surface-hover: theme(colors.slate.700);
+    --color-border: theme(colors.slate.700);
   }
 
   @font-face {
@@ -71,5 +144,5 @@
 }
 .map-div {
   flex: 1;
-  background-color: #eee;
+  background-color: var(--color-surface);
 }

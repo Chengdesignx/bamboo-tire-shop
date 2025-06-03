@@ -36,8 +36,7 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# ignore package-lock if generated (project uses yarn, not npm)
-package-lock.json
+# package-lock.json included for npm compatibility
 # next-video
 videos/*
 !videos/*.json
